@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[14]:
 
 
 from dash import Dash, dcc, html
@@ -21,12 +21,14 @@ app.layout = html.Div([
 
 server = app.server  # required for deployment
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8050))
+    app.run_server(host="0.0.0.0", port=port)
 
 
-# In[2]:
+# In[ ]:
 
 
-app.run(jupyter_mode="external")
+
 
