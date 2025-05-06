@@ -30,9 +30,3 @@ if __name__ == '__main__':
 
 app.run(jupyter_mode="external")
 
-
-# In[4]:
-
-
-pip freeze > requirements.txt
-
